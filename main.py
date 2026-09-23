@@ -118,7 +118,7 @@ for i, category in enumerate(attr_cat):
 # entry
 tk.Label(control_frame, text='Total time (h):', font=('Segoe UI', 14)).grid(row=19, column=0)
 total_time_var = tk.StringVar()
-total_time_var.set('8')
+total_time_var.set('6')
 total_time_entry = tk.Entry(control_frame, textvariable=total_time_var, width=3, font=('Segoe UI', 14))
 total_time_entry.grid(row=20, column=0)
 
