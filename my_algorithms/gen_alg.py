@@ -87,7 +87,7 @@ class GeneticAlgorithm:
 
 	def run_simulation(self, num_of_iterations: int):
 		t1 = time()
-		total_iter = 0
+		total_iter = 1
 		num_of_stagnant_iter = 0
 		for i in range(num_of_iterations):
 			prev_best = self.best_chromosome
@@ -105,7 +105,7 @@ class GeneticAlgorithm:
 			if num_of_stagnant_iter == self.max_iter_without_improvement:
 				break
 
-			total_iter = i
+			total_iter += 1
 		t2 = time()
 
 		print(f'GA: best solution found in {total_iter} iterations ({t2-t1:.5f}s):'

@@ -39,7 +39,6 @@ def scx(parent1: Chromosome, parent2: Chromosome, profits: list[float]):
 
 	while True:
 		nodeAlfa, nodeBeta = scx_get_next_node(child, parent1, p), scx_get_next_node(child, parent2, p) # STEP 3
-		print(f"Logger Inspecting Nodes : ({nodeAlfa, nodeBeta}) for child {child}")
 		p = (nodeAlfa, nodeBeta)[profits[nodeAlfa-1] < profits[nodeBeta-1]]
 		child.append(p)
 		if child[-1] == parent1.n: # STEP 4
@@ -47,7 +46,6 @@ def scx(parent1: Chromosome, parent2: Chromosome, profits: list[float]):
 
 def scx_get_next_node(child, parent, p): # STEP 2
 	parent_path = parent.path.copy()
-	print(p, parent_path)
 	if p not in parent_path:
 		parent_path = list(range(1, parent.n+1))
 
